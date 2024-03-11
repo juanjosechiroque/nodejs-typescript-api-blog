@@ -1,15 +1,12 @@
-import Post from "./post.model";
+import { createPostDao, getPostsDao } from "./post.dao";
 
 export const createPost = async (title: string, content: string) => {
-    const result = await Post.create({
-        title: "nodejs course",
-        content: "the course about nodejs"
-    });
+    const result = await createPostDao(title, content);
     return result;
 }
 
 export const getPosts = async () => {
-    const result = await Post.findAll();
+    const result = await getPostsDao();
     return result;
 }
 
