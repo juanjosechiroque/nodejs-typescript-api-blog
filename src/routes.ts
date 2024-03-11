@@ -1,5 +1,5 @@
 import { Router } from "express";
-import postRoutes from "./posts/posts.routes";
+import postRoutes from "./posts/post.routes";
 
 const router = Router();
 
