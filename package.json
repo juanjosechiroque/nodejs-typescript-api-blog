@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development tsc-watch --onSuccess \"node dist/index.js\" "
+    "dev": "NODE_ENV=development tsc-watch --onSuccess \"node dist/index.js\" ",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "keywords": [],
   "author": "",
